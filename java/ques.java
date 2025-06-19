@@ -10,7 +10,12 @@ public class ques{
     //ques7();
     //ques8();
     //ques9();
-    ques10();
+    //ques10();
+    //ques11();
+    //ques12();
+    //ques13();
+    //ques14();
+    ques15();
     }
 
 public static void ques1(){
@@ -115,19 +120,102 @@ public static void ques9(){
 }
 
 public static void ques10(){
-    Scanner in=new in.nextInt();
+    Scanner in=new Scanner(System.in);
     System.out.println("enter the no");
     int n=in.nextInt();
+    int m=n;
     int b=0;
     while(n!=0){
     int a=n%10;
     b=b+a;
-    n=n/10;
     b=b*10;
+    n=n/10;
     }
+    b=b/10;
     System.out.println(b);
+    if(m==b){
+        System.out.println("the no is palindrome");
+    }
+    else{
+        System.out.println("not a palindrome");
+    }
 }
 
+public static void ques11(){
+    Scanner in=new Scanner(System.in);
+    System.out.println("enter the no");
+    int n=in.nextInt();
+    System.out.println("the factors are");
+    for(int i=1;i<=n;i++){
+        if(n%i==0){
+            System.out.println(i);
+        }
+    }
+}
+
+public static void ques12(){
+    Scanner in=new Scanner(System.in);
+    System.out.println("enter the no");
+    int n=in.nextInt();
+    int a=0;
+    System.out.println("the sum of factors are");
+    for(int i=1;i<=n;i++){
+        if(n%i==0){
+            a=a+i;
+        }
+    }
+    System.out.println(a);
+}
+
+public static void ques13(){
+    Scanner in=new Scanner(System.in);
+    System.out.println("enter the no");
+    int a=0;
+    int n=in.nextInt();
+    System.out.println("the no factors are");
+    for(int i=1;i<=n;i++){
+        if(n%i==0){
+            a++;
+        }
+    }
+    System.out.println(a);
+}
+
+public static void ques14(){
+    Scanner in=new Scanner(System.in);
+    System.out.println("enter the no");
+    int c=0;
+    int n= in.nextInt();
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+            c=1;
+            break;
+        }
+    }
+    if(c==1){
+        System.out.println("not a prime");
+    }
+    else{
+        System.out.println("prime no");
+    }
+}
+
+public static void ques15(){
+    int b=0;
+    int c=0;
+    for(int i=3;i<=100;i++){
+        for(int j=2;j<i;j++){
+            if(i%j==0){
+                b=j;
+                c=1;
+            }
+        }
+        if(c!=1){
+            System.out.println(b);
+        }
+        c=0;
+    }
+}
 
 
 
